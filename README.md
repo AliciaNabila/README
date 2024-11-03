@@ -181,14 +181,14 @@ switch ($method) {
 - Body:
   - Pilih "raw" dan "JSON"
   - Masukkan:
-    {
+    ```json
+{
     "id": 11,
     "destination": "Pekanbaru - Kota Bertuah",
     "date": "2024-12-20",
     "price": "820000.00",
     "stock": 65
 }
-    ```json
     ```
 - Klik "Send"
 
