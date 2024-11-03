@@ -164,7 +164,7 @@ switch ($method) {
 
 #### a. GET All Books
 - Method: GET
-- URL: `http://localhost/rest_buku/book_api.php`
+- URL: ` http://localhost/rest_tickets/tickets_api.php`
 - Klik "Send"
 
 #### b. GET Specific Book
