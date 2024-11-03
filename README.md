@@ -27,7 +27,7 @@ CREATE TABLE ticketstore (
 INSERT INTO tickets (id, destination, date, price, stock) VALUES
 (1, 'Semarang-Bali', '2024-12-10', '1500000', '50'),
 (2, 'Yogyakarta-Jakarta', '2024-11-25', '120000', '30'),
-(3, 'Semarang-Surabaya’, '2024-12-20', '1200000’, '40'),
+(3, 'Semarang-Surabaya', '2024-12-20', '1200000', '40'),
 (4, 'Jakarta-Lombok', '2024-11-25', '950000', '25'),
 (5, 'Magelang-Tanggerang', '2024-12-18', '165000', '35'),
 (6, 'Semarang-Cirebon', '2024-12-08', '110000', '20'),
