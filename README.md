@@ -10,8 +10,7 @@ Membuat dan menguji web service untuk manajemen tickets menggunakan PHP dan MySQ
 ## Langkah-langkah Praktikum
 
 ### 1. Persiapan Lingkungan
-1. Instal XAMPP jika belum ada.
-2. Buat folder baru bernama `rest_tickets` di dalam direktori `htdocs` XAMPP Anda.
+1. Buat folder baru bernama `rest_tickets` di dalam direktori `htdocs` XAMPP Anda.
 
 ### 2. Membuat Database
 1. Buka phpMyAdmin (http://localhost/phpmyadmin)
