@@ -11,7 +11,7 @@
 
 ### 2. Membuat Database
 1. Buka phpMyAdmin (http://localhost/phpmyadmin)
-2. Buat database baru bernama `bookstore`
+2. Buat database baru bernama `ticketstore`
 3. Pilih database `bookstore`, lalu buka tab SQL
 4. Jalankan query SQL berikut untuk membuat tabel dan menambahkan data sampel:
 
@@ -90,7 +90,7 @@ switch ($method) {
     case 'GET':
         if (!empty($request) && isset($request[0])) {
             $id = $request[0];
-            $stmt = $db->prepare("SELECT * FROM tickets WHERE id = ?");
+            $stmt = $db->prepare("SELECT * FROM ticketstore WHERE id = ?");
             $stmt->execute([$id]);
             $tickets = $stmt->fetch();
             if ($tickets) {
@@ -99,7 +99,7 @@ switch ($method) {
                 response(404, ["message" => "tickets not found"]);
             }
         } else {
-            $stmt = $db->query("SELECT * FROM tickets");
+            $stmt = $db->query("SELECT * FROM ticketstore");
             $tickets = $stmt->fetchAll();
             response(200, $tickets);
         }
@@ -110,7 +110,7 @@ switch ($method) {
         if (!isset($data->destination) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "INSERT INTO tickets (destination, date, price, stock) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO ticketstore (destination, date, price, stock) VALUES (?, ?, ?, ?)";
         $stmt = $db->prepare($sql);
         if ($stmt->execute([$data->destination, $data->date, $data->price, $data->stock])) {
             response(201, ["message" => "tickets created", "id" => $db->lastInsertId()]);
@@ -128,7 +128,7 @@ switch ($method) {
         if (!isset($data->destinantion) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "UPDATE tickets SET destinantion = ?, date = ?, price = ?, stock = ? WHERE id = ?";
+        $sql = "UPDATE ticketstore SET destinantion = ?, date = ?, price = ?, stock = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
         if ($stmt->execute([$data->destinantion, $data->date, $data->price, $data->stock, $id])) {
             response(200, ["message" => "tickets updated"]);
@@ -142,7 +142,7 @@ switch ($method) {
             response(400, ["message" => "tickets ID is required"]);
         }
         $id = $request[0];
-        $sql = "DELETE FROM tickets WHERE id = ?";
+        $sql = "DELETE FROM ticketstore WHERE id = ?";
         $stmt = $db->prepare($sql);
         if ($stmt->execute([$id])) {
             response(200, ["message" => "tickets deleted"]);
@@ -162,17 +162,17 @@ switch ($method) {
 1. Buka Postman
 2. Buat request baru untuk setiap operasi berikut:
 
-#### a. GET All Books
+#### a. GET All Tickets
 - Method: GET
 - URL: ` http://localhost/rest_tickets/tickets_api.php`
 - Klik "Send"
 
-#### b. GET Specific Book
+#### b. GET Specific Tickets
 - Method: GET
-- URL: `http://localhost/rest_buku/book_api.php/1` (untuk buku dengan ID 1)
+- URL: `http://localhost/rest_tickets/tickets_api.php/5` (untuk buku dengan ID 5)
 - Klik "Send"
 
-#### c. POST New Book
+#### c. POST Tickets
 - Method: POST
 - URL: `http://localhost/rest_buku/book_api.php`
 - Headers: 
@@ -182,17 +182,19 @@ switch ($method) {
   - Pilih "raw" dan "JSON"
   - Masukkan:
     ```json
-    {
-        "title": "The Hobbit",
-        "author": "J.R.R. Tolkien",
-        "year": 1937
-    }
+{
+    "id": 11,
+    "destination": "Pekanbaru - Kota Bertuah",
+    "date": "2024-12-20",
+    "price": "820000.00",
+    "stock": 65
+}
     ```
 - Klik "Send"
 
-#### d. PUT (Update) Book
+#### d. PUT (Update) Tickets
 - Method: PUT
-- URL: `http://localhost/rest_buku/book_api.php/6` (asumsikan ID buku baru adalah 6)
+- URL: `http://localhost/rest_tickets/tickets_api.php/11` (asumsikan ID buku baru adalah 11)
 - Headers: 
   - Key: Content-Type
   - Value: application/json
@@ -200,17 +202,19 @@ switch ($method) {
   - Pilih "raw" dan "JSON"
   - Masukkan:
     ```json
-    {
-        "title": "The Hobbit: An Unexpected Journey",
-        "author": "J.R.R. Tolkien",
-        "year": 1937
-    }
+{
+    "id": 11,
+    "destination": "Pekanbaru - Kota Bertuah : Kota Madani",
+    "date": "2024-12-20",
+    "price": "820000.00",
+    "stock": 65
+}
     ```
 - Klik "Send"
 
-#### e. DELETE Book
+#### e. DELETE Tickets
 - Method: DELETE
-- URL: `http://localhost/rest_buku/book_api.php/6` (untuk menghapus buku dengan ID 6)
+- URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 6)
 - Klik "Send"
 
 ### 5. Latihan Tambahan
@@ -219,5 +223,4 @@ switch ($method) {
 3. Tambahkan validasi input yang lebih ketat (misalnya, tahun harus 4 digit).
 4. Buat dokumentasi API sederhana menggunakan Markdown atau HTML.
 
-### Kesimpulan
-Dalam praktikum ini, Anda telah berhasil membuat web service REST untuk manajemen buku menggunakan PHP dan MySQL. Anda juga telah belajar cara menguji API menggunakan Postman. Praktik ini memberikan dasar yang kuat untuk pengembangan API RESTful lebih lanjut.
+### Hasil Screenshoot
