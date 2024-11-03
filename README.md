@@ -182,8 +182,8 @@ switch ($method) {
     ```json
     {
        "destinantion :"Semarang-Aceh",
-       "date : 2024-12-20",
-       "price : 500000",
+       "date : "2024-12-20",
+       "price : "500000",
        "stock : "45"
     }
     ```
