@@ -224,3 +224,12 @@ switch ($method) {
 4. Buat dokumentasi API sederhana menggunakan Markdown atau HTML.
 
 ### Hasil Screenshoot
+![Screenshot (43)](https://github.com/user-attachments/assets/e47d6009-554c-41f7-a852-cbc597930b5c)
+![Screenshot (42)](https://github.com/user-attachments/assets/caf2012f-53d6-43ea-b79c-4b8a7f3c4531)
+![Screenshot (37)](https://github.com/user-attachments/assets/b18a6358-e4e5-41a2-8406-1fb8f84a407b)
+![Screenshot (38)](https://github.com/user-attachments/assets/beab65d8-b904-4800-bae7-bf3
+![Screenshot (39)](https://github.com/user-attachments/assets/a1aa27ec-55b2-4dd4-a826-b3f832cee2b5)
+6724b
+![Screenshot (40)](https://github.com/user-attachments/assets/d7c14007-c353-49a9-863e-2a18059a16f7)
+c31b)
+![Screenshot (41)](https://github.com/user-attachments/assets/6b07be26-b1e3-48db-be3f-7d2e6a56bd0f)
