@@ -180,8 +180,7 @@ switch ($method) {
   - Value: application/json
 - Body:
   - Pilih "raw" dan "JSON"
-  - Masukkan:
-    ```json
+  - Masukkan:```json
 {
     "id": 11,
     "destination": "Pekanbaru - Kota Bertuah",
