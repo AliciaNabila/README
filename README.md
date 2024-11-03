@@ -20,21 +20,21 @@
 CREATE TABLE ticketstore (
     id INT AUTO_INCREMENT PRIMARY KEY,
     destination VARCHAR(30),
-    date VARCHAR(30),
-    price DECIMAL(65), NOT NULL
-    stock INT(11), NOT NULL
+    date DATE,
+    price DECIMAL(10, 2), 
+    stock INT(11)
 );
-INSERT INTO tickets (id, destination, date, price, stock) VALUES
-(1, 'Semarang-Bali', '2024-12-10', '1500000', '50'),
-(2, 'Yogyakarta-Jakarta', '2024-11-25', '120000', '30'),
-(3, 'Semarang-Surabaya', '2024-12-20', '1200000', '40'),
-(4, 'Jakarta-Lombok', '2024-11-25', '950000', '25'),
-(5, 'Magelang-Tanggerang', '2024-12-18', '165000', '35'),
-(6, 'Semarang-Cirebon', '2024-12-08', '110000', '20'),
-(7, 'Jakarta-Palembang', '2024-12-22', '450000', '15'),
-(8, 'Surabaya-Pekanbaru', '2024-12-15', '650000', '30'),
-(9, 'Denpasar-Lombok', '2024-12-25', '750000', '40'),
-(10,'Semarang-Malang', '2024-11-05', '500000', '10');
+INSERT INTO ticketstore (destination, date, price, stock) VALUES
+('Jakarta - Kota Metropolitan', '2024-12-10', 550000.00, 90),
+('Bandung - Kota Kembang', '2024-12-11', 320000.00, 140),
+('Surabaya - Kota Pahlawan', '2024-12-12', 480000.00, 75),
+('Yogyakarta - Kota Budaya', '2024-12-13', 360000.00, 110),
+('Bali - Pulau Dewata', '2024-12-14', 620000.00, 55),
+('Medan - Kota Bersejarah', '2024-12-15', 500000.00, 85),
+('Makassar - Kota Pelabuhan', '2024-12-16', 470000.00, 70),
+('Semarang - Kota Pelayaran', '2024-12-17', 400000.00, 95),
+('Palembang - Kota Musi', '2024-12-18', 430000.00, 65),
+('Balikpapan - Kota Minyak', '2024-12-19', 510000.00, 80);
 
 ### 3. Membuat File PHP untuk Web Service
 1. Buka text editor Anda.
