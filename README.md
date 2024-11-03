@@ -212,15 +212,8 @@ switch ($method) {
 - Klik "Send"
 #### e. DELETE Tickets
 - Method: DELETE
-- URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 6)
+- URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 11)
 - Klik "Send"
-
-### 5. Latihan Tambahan
-1. Tambahkan fitur pencarian buku berdasarkan judul atau penulis.
-2. Implementasikan paginasi untuk mendapatkan buku.
-3. Tambahkan validasi input yang lebih ketat (misalnya, tahun harus 4 digit).
-4. Buat dokumentasi API sederhana menggunakan Markdown atau HTML.
-
 ### Hasil Screenshoot
 ![Screenshot (43)](https://github.com/user-attachments/assets/2b90ae9d-c961-400b-8b8c-98b2730d27a1)
 ![Screenshot (42)](https://github.com/user-attachments/assets/4ef06b54-e2f7-4c5a-a944-c7aaacc56811)
