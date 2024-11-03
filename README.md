@@ -1,3 +1,7 @@
+# ALICIA AYU NABILA-21.01.55.0022
+## Tujuan
+Membuat dan menguji web service untuk manajemen tickets menggunakan PHP dan MySQL.
+
 ## Alat yang Dibutuhkan
 1. XAMPP (atau server web lain dengan PHP dan MySQL)
 2. Text editor (misalnya Visual Studio Code, Notepad++, dll)
