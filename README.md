@@ -7,12 +7,12 @@
 
 ### 1. Persiapan Lingkungan
 1. Instal XAMPP jika belum ada.
-2. Buat folder baru bernama `rest_buku` di dalam direktori `htdocs` XAMPP Anda.
+2. Buat folder baru bernama `rest_tickets` di dalam direktori `htdocs` XAMPP Anda.
 
 ### 2. Membuat Database
 1. Buka phpMyAdmin (http://localhost/phpmyadmin)
 2. Buat database baru bernama `ticketstore`
-3. Pilih database `bookstore`, lalu buka tab SQL
+3. Pilih database `ticketstore`, lalu buka tab SQL
 4. Jalankan query SQL berikut untuk membuat tabel dan menambahkan data sampel:
 
 ```sql
