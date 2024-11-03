@@ -1,4 +1,3 @@
-# README
 ## Alat yang Dibutuhkan
 1. XAMPP (atau server web lain dengan PHP dan MySQL)
 2. Text editor (misalnya Visual Studio Code, Notepad++, dll)
@@ -8,11 +7,11 @@
 
 ### 1. Persiapan Lingkungan
 1. Instal XAMPP jika belum ada.
-2. Buat folder baru bernama `rest_tickets` di dalam direktori `htdocs` XAMPP Anda.
+2. Buat folder baru bernama `rest_buku` di dalam direktori `htdocs` XAMPP Anda.
 
 ### 2. Membuat Database
 1. Buka phpMyAdmin (http://localhost/phpmyadmin)
-2. Buat database baru bernama `ticketstore`
+2. Buat database baru bernama `bookstore`
 3. Pilih database `bookstore`, lalu buka tab SQL
 4. Jalankan query SQL berikut untuk membuat tabel dan menambahkan data sampel:
 
@@ -24,6 +23,7 @@ CREATE TABLE ticketstore (
     price DECIMAL(10, 2), 
     stock INT(11)
 );
+
 INSERT INTO ticketstore (destination, date, price, stock) VALUES
 ('Jakarta - Kota Metropolitan', '2024-12-10', 550000.00, 90),
 ('Bandung - Kota Kembang', '2024-12-11', 320000.00, 140),
@@ -35,12 +35,14 @@ INSERT INTO ticketstore (destination, date, price, stock) VALUES
 ('Semarang - Kota Pelayaran', '2024-12-17', 400000.00, 95),
 ('Palembang - Kota Musi', '2024-12-18', 430000.00, 65),
 ('Balikpapan - Kota Minyak', '2024-12-19', 510000.00, 80);
+```
 
 ### 3. Membuat File PHP untuk Web Service
 1. Buka text editor Anda.
-2. Buat file baru dan simpan sebagai `tickets_api.php` di dalam folder `rest_tickets`.
-3. Salin dan tempel kode berikut ke dalam `tickets_api.php`:
+2. Buat file baru dan simpan sebagai `book_api.php` di dalam folder `rest_buku`.
+3. Salin dan tempel kode berikut ke dalam `book_api.php`:
 
+```php
 <?php
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
@@ -56,7 +58,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 
 function getConnection() {
     $host = 'localhost';
-    $db   = 'ticketstore';
+    $db   = 'bookstore';
     $user = 'root';
     $pass = ''; // Ganti dengan password MySQL Anda jika ada
     $charset = 'utf8mb4';
@@ -88,64 +90,64 @@ switch ($method) {
     case 'GET':
         if (!empty($request) && isset($request[0])) {
             $id = $request[0];
-            $stmt = $db->prepare("SELECT * FROM tickets WHERE id = ?");
+            $stmt = $db->prepare("SELECT * FROM books WHERE id = ?");
             $stmt->execute([$id]);
-            $tickets = $stmt->fetch();
-            if ($tickets) {
-                response(200, $tickets);
+            $book = $stmt->fetch();
+            if ($book) {
+                response(200, $book);
             } else {
-                response(404, ["message" => "tickets not found"]);
+                response(404, ["message" => "Book not found"]);
             }
         } else {
-            $stmt = $db->query("SELECT * FROM tickets");
-            $tickets = $stmt->fetchAll();
-            response(200, $tickets);
+            $stmt = $db->query("SELECT * FROM books");
+            $books = $stmt->fetchAll();
+            response(200, $books);
         }
         break;
     
     case 'POST':
         $data = json_decode(file_get_contents("php://input"));
-        if (!isset($data->destination) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
+        if (!isset($data->title) || !isset($data->author) || !isset($data->year)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "INSERT INTO tickets (destination, date, price, stock) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO books (title, author, year) VALUES (?, ?, ?)";
         $stmt = $db->prepare($sql);
-        if ($stmt->execute([$data->destination, $data->date, $data->price, $data->stock])) {
-            response(201, ["message" => "tickets created", "id" => $db->lastInsertId()]);
+        if ($stmt->execute([$data->title, $data->author, $data->year])) {
+            response(201, ["message" => "Book created", "id" => $db->lastInsertId()]);
         } else {
-            response(500, ["message" => "Failed to create tickets"]);
+            response(500, ["message" => "Failed to create book"]);
         }
         break;
     
     case 'PUT':
         if (empty($request) || !isset($request[0])) {
-            response(400, ["message" => "tickets ID is required"]);
+            response(400, ["message" => "Book ID is required"]);
         }
         $id = $request[0];
         $data = json_decode(file_get_contents("php://input"));
-        if (!isset($data->destinantion) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
+        if (!isset($data->title) || !isset($data->author) || !isset($data->year)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "UPDATE tickets SET destinantion = ?, date = ?, price = ?, stock = ? WHERE id = ?";
+        $sql = "UPDATE books SET title = ?, author = ?, year = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
-        if ($stmt->execute([$data->destinantion, $data->date, $data->price, $data->stock, $id])) {
-            response(200, ["message" => "tickets updated"]);
+        if ($stmt->execute([$data->title, $data->author, $data->year, $id])) {
+            response(200, ["message" => "Book updated"]);
         } else {
-            response(500, ["message" => "Failed to update tickets"]);
+            response(500, ["message" => "Failed to update book"]);
         }
         break;
-
+    
     case 'DELETE':
         if (empty($request) || !isset($request[0])) {
-            response(400, ["message" => "tickets ID is required"]);
+            response(400, ["message" => "Book ID is required"]);
         }
         $id = $request[0];
-        $sql = "DELETE FROM tickets WHERE id = ?";
+        $sql = "DELETE FROM books WHERE id = ?";
         $stmt = $db->prepare($sql);
         if ($stmt->execute([$id])) {
-            response(200, ["message" => "tickets deleted"]);
+            response(200, ["message" => "Book deleted"]);
         } else {
-            response(500, ["message" => "Failed to delete tickets"]);
+            response(500, ["message" => "Failed to delete book"]);
         }
         break;
     
@@ -160,19 +162,19 @@ switch ($method) {
 1. Buka Postman
 2. Buat request baru untuk setiap operasi berikut:
 
-#### a. GET All Tickets
+#### a. GET All Books
 - Method: GET
-- URL: `http://localhost/rest_tickets/tickets_api.php`
+- URL: `http://localhost/rest_buku/book_api.php`
 - Klik "Send"
 
 #### b. GET Specific Book
 - Method: GET
-- URL: `http://localhost/rest_tickets/tickets_api.php/1` (untuk buku dengan ID 1)
+- URL: `http://localhost/rest_buku/book_api.php/1` (untuk buku dengan ID 1)
 - Klik "Send"
 
-#### c. POST New Tickets
+#### c. POST New Book
 - Method: POST
-- URL: `http://localhost/rest_tickets/tickets_api.php`
+- URL: `http://localhost/rest_buku/book_api.php`
 - Headers: 
   - Key: Content-Type
   - Value: application/json
@@ -181,17 +183,16 @@ switch ($method) {
   - Masukkan:
     ```json
     {
-       "destination :"Semarang-Aceh",
-       "date : "2024-12-20",
-       "price : "500000",
-       "stock : "45"
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "year": 1937
     }
     ```
 - Klik "Send"
 
-#### d. PUT (Update) Tickets
+#### d. PUT (Update) Book
 - Method: PUT
-- URL: `http://localhost/rest_tickets/tickets_api.php/11` (asumsikan ID buku baru adalah 11)
+- URL: `http://localhost/rest_buku/book_api.php/6` (asumsikan ID buku baru adalah 6)
 - Headers: 
   - Key: Content-Type
   - Value: application/json
@@ -200,25 +201,23 @@ switch ($method) {
   - Masukkan:
     ```json
     {
-       "destination :"Semarang-Malang",
-       "date : "2024-11-05",
-       "price : "150000",
-       "stock : "30"
+        "title": "The Hobbit: An Unexpected Journey",
+        "author": "J.R.R. Tolkien",
+        "year": 1937
     }
     ```
 - Klik "Send"
 
-#### e. DELETE Tickets
+#### e. DELETE Book
 - Method: DELETE
-- URL: `http://localhost/rest_tickets/tickets_api.php/5` (untuk menghapus buku dengan ID 5)
+- URL: `http://localhost/rest_buku/book_api.php/6` (untuk menghapus buku dengan ID 6)
 - Klik "Send"
 
-### Hasil Screenshoot
-![Screenshot (24)](https://github.com/user-attachments/assets/60c32652-6efb-47a1-bff5-4d9e6a976bb6)
-![Screenshot (25)](https://github.com/user-attachments/assets/10330fec-7768-4ff9-8081-04c1889fc86d)
-![Screenshot (26)](https://github.com/user-attachments/assets/1b7ed635-42dd-4ed3-8ba8-2ecd98d882c5)
-![Screenshot (27)](https://github.com/user-attachments/assets/8809326b-ea8c-403e-ae4f-92cff0f3b031)
-![Screenshot (28)](https://github.com/user-attachments/assets/13e69725-f83d-4f98-b28b-533d9d50963b)
-![Screenshot (29)](https://github.com/user-attachments/assets/35e8ec98-4554-41e0-b7dc-18df546febde)
-![Screenshot (30)](https://github.com/user-attachments/assets/af5e6518-08ba-4417-b7be-336c8378a19e)
+### 5. Latihan Tambahan
+1. Tambahkan fitur pencarian buku berdasarkan judul atau penulis.
+2. Implementasikan paginasi untuk mendapatkan buku.
+3. Tambahkan validasi input yang lebih ketat (misalnya, tahun harus 4 digit).
+4. Buat dokumentasi API sederhana menggunakan Markdown atau HTML.
 
+### Kesimpulan
+Dalam praktikum ini, Anda telah berhasil membuat web service REST untuk manajemen buku menggunakan PHP dan MySQL. Anda juga telah belajar cara menguji API menggunakan Postman. Praktik ini memberikan dasar yang kuat untuk pengembangan API RESTful lebih lanjut.
