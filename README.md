@@ -58,7 +58,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 
 function getConnection() {
     $host = 'localhost';
-    $db   = 'bookstore';
+    $db   = 'ticketstore';
     $user = 'root';
     $pass = ''; // Ganti dengan password MySQL Anda jika ada
     $charset = 'utf8mb4';
@@ -90,64 +90,64 @@ switch ($method) {
     case 'GET':
         if (!empty($request) && isset($request[0])) {
             $id = $request[0];
-            $stmt = $db->prepare("SELECT * FROM books WHERE id = ?");
+            $stmt = $db->prepare("SELECT * FROM tickets WHERE id = ?");
             $stmt->execute([$id]);
-            $book = $stmt->fetch();
-            if ($book) {
-                response(200, $book);
+            $tickets = $stmt->fetch();
+            if ($tickets) {
+                response(200, $tickets);
             } else {
-                response(404, ["message" => "Book not found"]);
+                response(404, ["message" => "tickets not found"]);
             }
         } else {
-            $stmt = $db->query("SELECT * FROM books");
-            $books = $stmt->fetchAll();
-            response(200, $books);
+            $stmt = $db->query("SELECT * FROM tickets");
+            $tickets = $stmt->fetchAll();
+            response(200, $tickets);
         }
         break;
     
     case 'POST':
         $data = json_decode(file_get_contents("php://input"));
-        if (!isset($data->title) || !isset($data->author) || !isset($data->year)) {
+        if (!isset($data->destination) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "INSERT INTO books (title, author, year) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO tickets (destination, date, price, stock) VALUES (?, ?, ?, ?)";
         $stmt = $db->prepare($sql);
-        if ($stmt->execute([$data->title, $data->author, $data->year])) {
-            response(201, ["message" => "Book created", "id" => $db->lastInsertId()]);
+        if ($stmt->execute([$data->destination, $data->date, $data->price, $data->stock])) {
+            response(201, ["message" => "tickets created", "id" => $db->lastInsertId()]);
         } else {
-            response(500, ["message" => "Failed to create book"]);
+            response(500, ["message" => "Failed to create tickets"]);
         }
         break;
     
     case 'PUT':
         if (empty($request) || !isset($request[0])) {
-            response(400, ["message" => "Book ID is required"]);
+            response(400, ["message" => "tickets ID is required"]);
         }
         $id = $request[0];
         $data = json_decode(file_get_contents("php://input"));
-        if (!isset($data->title) || !isset($data->author) || !isset($data->year)) {
+        if (!isset($data->destinantion) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "UPDATE books SET title = ?, author = ?, year = ? WHERE id = ?";
+        $sql = "UPDATE tickets SET destinantion = ?, date = ?, price = ?, stock = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
-        if ($stmt->execute([$data->title, $data->author, $data->year, $id])) {
-            response(200, ["message" => "Book updated"]);
+        if ($stmt->execute([$data->destinantion, $data->date, $data->price, $data->stock, $id])) {
+            response(200, ["message" => "tickets updated"]);
         } else {
-            response(500, ["message" => "Failed to update book"]);
+            response(500, ["message" => "Failed to update tickets"]);
         }
         break;
-    
+
     case 'DELETE':
         if (empty($request) || !isset($request[0])) {
-            response(400, ["message" => "Book ID is required"]);
+            response(400, ["message" => "tickets ID is required"]);
         }
         $id = $request[0];
-        $sql = "DELETE FROM books WHERE id = ?";
+        $sql = "DELETE FROM tickets WHERE id = ?";
         $stmt = $db->prepare($sql);
         if ($stmt->execute([$id])) {
-            response(200, ["message" => "Book deleted"]);
+            response(200, ["message" => "tickets deleted"]);
         } else {
-            response(500, ["message" => "Failed to delete book"]);
+            response(500, ["message" => "Failed to delete tickets"]);
         }
         break;
     
