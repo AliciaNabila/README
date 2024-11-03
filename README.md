@@ -181,7 +181,7 @@ switch ($method) {
   - Masukkan:
     ```json
     {
-       "destinantion :"Semarang-Aceh",
+       "destination :"Semarang-Aceh",
        "date : "2024-12-20",
        "price : "500000",
        "stock : "45"
@@ -200,7 +200,7 @@ switch ($method) {
   - Masukkan:
     ```json
     {
-       "destinantion :"Semarang-Malang",
+       "destination :"Semarang-Malang",
        "date : "2024-11-05",
        "price : "150000",
        "stock : "30"
