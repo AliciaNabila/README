@@ -30,16 +30,16 @@ CREATE TABLE ticketstore (
     stock INT(11), NOT NULL
 );
 INSERT INTO tickets (id, destination, date, price, stock) VALUES
-(1, ‘Semarang-Bali’, ‘2024-12-10’, ‘1500000’, ‘50’),
-(2, ‘Yogyakarta-Jakarta’, ‘2024-11-25’, ‘120000’, ‘30’),
-(3, ‘Semarang-Surabaya’, 2024-12-20', ‘1200000’, ‘40’),
-(4, ‘Jakarta-Lombok’, ‘2024-11-25’, ‘950000’, ‘25’),
-(5, ‘Magelang-Tanggerang’, ‘2024-12-18’, ‘165000’, ‘35’),
-(6, ‘Semarang-Cirebon’, ‘2024-12-08’, ‘110000’, ‘20’),
-(7, ‘Jakarta-Palembang’, ‘2024-12-22’, ‘450000’, ‘15’),
-(8, ‘Surabaya-Pekanbaru’, 2024-12-15’, ‘650000’, ‘30’),
-(9, ‘Denpasar-Lombok’, ‘2024-12-25’, ‘750000’, ‘40’),
-(10,’ Semarang-Malang, ‘2024-11-05’, ‘500000’, ‘10’);
+(1, 'Semarang-Bali', '2024-12-10', '1500000', '50'),
+(2, 'Yogyakarta-Jakarta', '2024-11-25', '120000', '30'),
+(3, 'Semarang-Surabaya’, 2024-12-20', ‘1200000’, ‘40’),
+(4, 'Jakarta-Lombok’, ‘2024-11-25’, ‘950000’, ‘25’),
+(5, 'Magelang-Tanggerang’, ‘2024-12-18’, ‘165000’, ‘35’),
+(6, 'Semarang-Cirebon’, ‘2024-12-08’, ‘110000’, ‘20’),
+(7, 'Jakarta-Palembang’, ‘2024-12-22’, ‘450000’, ‘15’),
+(8, 'Surabaya-Pekanbaru’, 2024-12-15’, ‘650000’, ‘30’),
+(9, 'Denpasar-Lombok’, ‘2024-12-25’, ‘750000’, ‘40’),
+(10,'Semarang-Malang, ‘2024-11-05’, ‘500000’, ‘10’);
 
 ### 3. Membuat File PHP untuk Web Service
 1. Buka text editor Anda.
