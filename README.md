@@ -202,9 +202,10 @@ switch ($method) {
   - Masukkan:
     ```json
     {
-        "title": "The Hobbit: An Unexpected Journey",
-        "author": "J.R.R. Tolkien",
-        "year": 1937
+        "destinantion": "Pekanbaru - Kota Bertuah : Kota Madani",
+        "date": "2024-12-20",
+        "price": "820000.00",
+        "stock" : 65
     }
     ```
 - Klik "Send"
