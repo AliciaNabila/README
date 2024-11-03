@@ -180,20 +180,21 @@ switch ($method) {
   - Value: application/json
 - Body:
   - Pilih "raw" dan "JSON"
-  - Masukkan:```json
-{
-    "id": 11,
-    "destination": "Pekanbaru - Kota Bertuah",
-    "date": "2024-12-20",
-    "price": "820000.00",
-    "stock": 65
-}
+  - Masukkan:
+    ```json
+    {
+        "destination": "Pekanbaru - Kota Bertuah",
+        "date": "2024-12-20",
+        "price": "820000.00",
+        "stock" : 65
+    }
     ```
 - Klik "Send"
 
+
 #### d. PUT (Update) Tickets
 - Method: PUT
-- URL: `http://localhost/rest_buku/book_api.php/6` (asumsikan ID buku baru adalah 6)
+- URL: `http://localhost/rest_tickets/tickets_api.php/11` (asumsikan ID buku baru adalah 11)
 - Headers: 
   - Key: Content-Type
   - Value: application/json
