@@ -41,7 +41,7 @@ INSERT INTO ticketstore (destination, date, price, stock) VALUES
 ```
 
 ### 3. Membuat File PHP untuk Web Service
-1. Buka text editor Anda.
+1. Buka text editor (Visual Studio Code)
 2. Buat file baru dan simpan sebagai `tickets_api.php` di dalam folder `rest_tickets`.
 3. Salin dan tempel kode berikut ke dalam `tickets_api.php`:
 
