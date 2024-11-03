@@ -193,7 +193,7 @@ switch ($method) {
 
 #### d. PUT (Update) Tickets
 - Method: PUT
-- URL: `http://localhost/rest_tickets/tickets_api.php/11` (asumsikan ID buku baru adalah 11)
+- URL: `http://localhost/rest_buku/book_api.php/6` (asumsikan ID buku baru adalah 6)
 - Headers: 
   - Key: Content-Type
   - Value: application/json
@@ -201,16 +201,13 @@ switch ($method) {
   - Pilih "raw" dan "JSON"
   - Masukkan:
     ```json
-{
-    "id": 11,
-    "destination": "Pekanbaru - Kota Bertuah : Kota Madani",
-    "date": "2024-12-20",
-    "price": "820000.00",
-    "stock": 65
-}
+    {
+        "title": "The Hobbit: An Unexpected Journey",
+        "author": "J.R.R. Tolkien",
+        "year": 1937
+    }
     ```
 - Klik "Send"
-
 #### e. DELETE Tickets
 - Method: DELETE
 - URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 6)
