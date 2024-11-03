@@ -222,10 +222,10 @@ switch ($method) {
 4. Buat dokumentasi API sederhana menggunakan Markdown atau HTML.
 
 ### Hasil Screenshoot
-![Screenshot (43)](https://github.com/user-attachments/assets/e47d6009-554c-41f7-a852-cbc597930b5c)
-![Screenshot (42)](https://github.com/user-attachments/assets/caf2012f-53d6-43ea-b79c-4b8a7f3c4531)
-![Screenshot (37)](https://github.com/user-attachments/assets/b18a6358-e4e5-41a2-8406-1fb8f84a407b)
-![Screenshot (38)](https://github.com/user-attachments/assets/beab65d8-b904-4800-bae7-bf3
-![Screenshot (39)](https://github.com/user-attachments/assets/a1aa27ec-55b2-4dd4-a826-b3f832cee2b5)
-![Screenshot (40)](https://github.com/user-attachments/assets/d7c14007-c353-49a9-863e-2a18059a16f7)
-![Screenshot (41)](https://github.com/user-attachments/assets/6b07be26-b1e3-48db-be3f-7d2e6a56bd0f)
+![Screenshot (43)](https://github.com/user-attachments/assets/2b90ae9d-c961-400b-8b8c-98b2730d27a1)
+![Screenshot (42)](https://github.com/user-attachments/assets/4ef06b54-e2f7-4c5a-a944-c7aaacc56811)
+![Screenshot (37)](https://github.com/user-attachments/assets/2bea1867-0cfd-4271-b46a-b13f5d6c17e4)
+![Screenshot (38)](https://github.com/user-attachments/assets/80835dc6-3fae-4c13-9fe7-d919d2a6c996)
+![Screenshot (39)](https://github.com/user-attachments/assets/82c2f43c-e5ac-4e18-b281-22a32ad180a7)
+![Screenshot (40)](https://github.com/user-attachments/assets/756f461e-668e-442f-a3cd-f1b2bd598680)
+![Screenshot (41)](https://github.com/user-attachments/assets/d84bdf1f-f687-468b-bccd-5952fbf96546)
