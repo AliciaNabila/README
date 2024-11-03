@@ -22,20 +22,24 @@ Membuat dan menguji web service REST untuk manajemen buku menggunakan PHP dan My
 4. Jalankan query SQL berikut untuk membuat tabel dan menambahkan data sampel:
 
 ```sql
-CREATE TABLE books (
+CREATE TABLE ticketstore (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
-    year INT NOT NULL
+    destination VARCHAR(30),
+    date VARCHAR(30),
+    price DECIMAL(65), NOT NULL
+    stock INT(11), NOT NULL
 );
-
-INSERT INTO books (title, author, year) VALUES
-('To Kill a Mockingbird', 'Harper Lee', 1960),
-('1984', 'George Orwell', 1949),
-('Pride and Prejudice', 'Jane Austen', 1813),
-('The Great Gatsby', 'F. Scott Fitzgerald', 1925),
-('One Hundred Years of Solitude', 'Gabriel García Márquez', 1967);
-```
+INSERT INTO tickets (id, destination, date, price, stock) VALUES
+(1, ‘Semarang-Bali’, ‘2024-12-10’, ‘1500000’, ‘50’),
+(2, ‘Yogyakarta-Jakarta’, ‘2024-11-25’, ‘120000’, ‘30’),
+(3, ‘Semarang-Surabaya’, 2024-12-20', ‘1200000’, ‘40’),
+(4, ‘Jakarta-Lombok’, ‘2024-11-25’, ‘950000’, ‘25’),
+(5, ‘Magelang-Tanggerang’, ‘2024-12-18’, ‘165000’, ‘35’),
+(6, ‘Semarang-Cirebon’, ‘2024-12-08’, ‘110000’, ‘20’),
+(7, ‘Jakarta-Palembang’, ‘2024-12-22’, ‘450000’, ‘15’),
+(8, ‘Surabaya-Pekanbaru’, 2024-12-15’, ‘650000’, ‘30’),
+(9, ‘Denpasar-Lombok’, ‘2024-12-25’, ‘750000’, ‘40’),
+(10,’ Semarang-Malang, ‘2024-11-05’, ‘500000’, ‘10’);
 
 ### 3. Membuat File PHP untuk Web Service
 1. Buka text editor Anda.
