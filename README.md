@@ -218,10 +218,4 @@ switch ($method) {
 - URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 11)
 - Klik "Send"
 ### Hasil Screenshoot
-![Screenshot (43)](https://github.com/user-attachments/assets/2b90ae9d-c961-400b-8b8c-98b2730d27a1)
-![Screenshot (42)](https://github.com/user-attachments/assets/4ef06b54-e2f7-4c5a-a944-c7aaacc56811)
-![Screenshot (37)](https://github.com/user-attachments/assets/2bea1867-0cfd-4271-b46a-b13f5d6c17e4)
-![Screenshot (38)](https://github.com/user-attachments/assets/80835dc6-3fae-4c13-9fe7-d919d2a6c996)
-![Screenshot (39)](https://github.com/user-attachments/assets/82c2f43c-e5ac-4e18-b281-22a32ad180a7)
-![Screenshot (40)](https://github.com/user-attachments/assets/756f461e-668e-442f-a3cd-f1b2bd598680)
-![Screenshot (41)](https://github.com/user-attachments/assets/d84bdf1f-f687-468b-bccd-5952fbf96546)
+
