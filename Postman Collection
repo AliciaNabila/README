@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "f87301de-1cdc-4d4c-aa07-e57d3cf355a3",
+		"name": "UTS_WEB SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39156911"
+	},
+	"item": [
+		{
+			"name": " http://localhost/rest_tickets/tickets_api.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/rest_tickets/tickets_api.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rest_tickets",
+						"tickets_api.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost/rest_tickets/tickets_api.php",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/rest_tickets/tickets_api.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"rest_tickets",
+								"tickets_api.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Nov 2024 04:45:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1008"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"destination\": \"Jakarta - Kota Metropolitan\",\n        \"date\": \"2024-12-10\",\n        \"price\": \"550000.00\",\n        \"stock\": 90\n    },\n    {\n        \"id\": 2,\n        \"destination\": \"Bandung - Kota Kembang\",\n        \"date\": \"2024-12-11\",\n        \"price\": \"320000.00\",\n        \"stock\": 140\n    },\n    {\n        \"id\": 3,\n        \"destination\": \"Surabaya - Kota Pahlawan\",\n        \"date\": \"2024-12-12\",\n        \"price\": \"480000.00\",\n        \"stock\": 75\n    },\n    {\n        \"id\": 4,\n        \"destination\": \"Yogyakarta - Kota Budaya\",\n        \"date\": \"2024-12-13\",\n        \"price\": \"360000.00\",\n        \"stock\": 110\n    },\n    {\n        \"id\": 5,\n        \"destination\": \"Bali - Pulau Dewata\",\n        \"date\": \"2024-12-14\",\n        \"price\": \"620000.00\",\n        \"stock\": 55\n    },\n    {\n        \"id\": 6,\n        \"destination\": \"Medan - Kota Bersejarah\",\n        \"date\": \"2024-12-15\",\n        \"price\": \"500000.00\",\n        \"stock\": 85\n    },\n    {\n        \"id\": 7,\n        \"destination\": \"Makassar - Kota Pelabuhan\",\n        \"date\": \"2024-12-16\",\n        \"price\": \"470000.00\",\n        \"stock\": 70\n    },\n    {\n        \"id\": 8,\n        \"destination\": \"Semarang - Kota Pelayaran\",\n        \"date\": \"2024-12-17\",\n        \"price\": \"400000.00\",\n        \"stock\": 95\n    },\n    {\n        \"id\": 9,\n        \"destination\": \"Palembang - Kota Musi\",\n        \"date\": \"2024-12-18\",\n        \"price\": \"430000.00\",\n        \"stock\": 65\n    },\n    {\n        \"id\": 10,\n        \"destination\": \"Balikpapan - Kota Minyak\",\n        \"date\": \"2024-12-19\",\n        \"price\": \"510000.00\",\n        \"stock\": 80\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost/rest_tickets/tickets_api.php/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/rest_tickets/tickets_api.php/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rest_tickets",
+						"tickets_api.php",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost/rest_tickets/tickets_api.php/5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/rest_tickets/tickets_api.php/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"rest_tickets",
+								"tickets_api.php",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Nov 2024 04:47:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"destination\": \"Bali - Pulau Dewata\",\n    \"date\": \"2024-12-14\",\n    \"price\": \"620000.00\",\n    \"stock\": 55\n}"
+				}
+			]
+		},
+		{
+			"name": " http://localhost/rest_tickets/tickets_api.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Samarinda - Kota Tepian\",\r\n    \"date\": \"2024-12-20\",\r\n    \"price\": \"850000.00\",\r\n    \"stock\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/rest_tickets/tickets_api.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rest_tickets",
+						"tickets_api.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost/rest_tickets/tickets_api.php",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"destination\": \"Samarinda - Kota Tepian\",\r\n    \"date\": \"2024-12-20\",\r\n    \"price\": \"850000.00\",\r\n    \"stock\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/rest_tickets/tickets_api.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"rest_tickets",
+								"tickets_api.php"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Nov 2024 04:50:55 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"tickets created\",\n    \"id\": \"12\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost/rest_tickets/tickets_api.php/12",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Samarinda - Kota Tenun\",\r\n    \"date\": \"2024-12-20\",\r\n    \"price\": \"850000.00\",\r\n    \"stock\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/rest_tickets/tickets_api.php/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rest_tickets",
+						"tickets_api.php",
+						"12"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost/rest_tickets/tickets_api.php/12",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"destination\": \"Samarinda - Kota Tenun\",\r\n    \"date\": \"2024-12-20\",\r\n    \"price\": \"850000.00\",\r\n    \"stock\": 80\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/rest_tickets/tickets_api.php/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"rest_tickets",
+								"tickets_api.php",
+								"12"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Nov 2024 04:56:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"tickets updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost/rest_tickets/tickets_api.php/12",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/rest_tickets/tickets_api.php/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rest_tickets",
+						"tickets_api.php",
+						"12"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost/rest_tickets/tickets_api.php/12",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/rest_tickets/tickets_api.php/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"rest_tickets",
+								"tickets_api.php",
+								"12"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 04 Nov 2024 04:57:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"tickets deleted\"\n}"
+				}
+			]
+		}
+	]
+}
