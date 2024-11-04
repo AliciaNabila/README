@@ -197,7 +197,7 @@ switch ($method) {
 
 #### d. PUT (Update) Tickets
 - Method: PUT
-- URL: `http://localhost/rest_tickets/tickets_api.php/11` (asumsikan ID buku baru adalah 11)
+- URL: `http://localhost/rest_tickets/tickets_api.php/12` (asumsikan ID buku baru adalah 12)
 - Headers: 
   - Key: Content-Type
   - Value: application/json
@@ -215,7 +215,7 @@ switch ($method) {
 - Klik "Send"
 #### e. DELETE Tickets
 - Method: DELETE
-- URL: `http://localhost/rest_tickets/tickets_api.php/11` (untuk menghapus buku dengan ID 11)
+- URL: `http://localhost/rest_tickets/tickets_api.php/12` (untuk menghapus buku dengan ID 12)
 - Klik "Send"
 ### Hasil Screenshoot
 ![Screenshot (37)](https://github.com/user-attachments/assets/bd09f808-e851-47a7-ae86-02e0d7854303)
