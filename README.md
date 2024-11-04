@@ -218,9 +218,9 @@ switch ($method) {
 - URL: `http://localhost/rest_tickets/tickets_api.php/12` (untuk menghapus buku dengan ID 12)
 - Klik "Send"
 ### Hasil Screenshoot
-![Screenshot (37)](https://github.com/user-attachments/assets/bd09f808-e851-47a7-ae86-02e0d7854303)
-![Screenshot (38)](https://github.com/user-attachments/assets/099b9ee5-99ff-4c15-b5ea-34d208ab5772)
-![Screenshot (39)](https://github.com/user-attachments/assets/385f2a08-e72e-4430-a1d4-4e9e95cebaeb)
-![Screenshot (50)](https://github.com/user-attachments/assets/484077da-f8be-4a21-b3cc-20dcb4abf5a5)
-![Screenshot (51)](https://github.com/user-attachments/assets/dd49f81b-47ed-4889-a5f2-f7ae7c7bec4b)
+![Screenshot (53)](https://github.com/user-attachments/assets/e0f8288b-db9a-4e30-b91f-8e4008be5556)
+![Screenshot (54)](https://github.com/user-attachments/assets/613220a5-9991-46a6-b542-4ff1e9a2cc02)
+![Screenshot (55)](https://github.com/user-attachments/assets/234caf8f-11ce-41ea-a6bc-2748bdbaeb22)
+![Screenshot (59)](https://github.com/user-attachments/assets/a62479eb-a8ee-4503-a27d-21996a73d4f0)
+![Screenshot (60)](https://github.com/user-attachments/assets/60e199bb-fdbc-4d63-baa4-67fde48b232a)
 
