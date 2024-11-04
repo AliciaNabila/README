@@ -128,12 +128,12 @@ switch ($method) {
         }
         $id = $request[0];
         $data = json_decode(file_get_contents("php://input"));
-        if (!isset($data->destinantion) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
+        if (!isset($data->destination) || !isset($data->date) || !isset($data->price) || !isset($data->stock)) {
             response(400, ["message" => "Missing required fields"]);
         }
-        $sql = "UPDATE ticketstore SET destinantion = ?, date = ?, price = ?, stock = ? WHERE id = ?";
+        $sql = "UPDATE ticketstore SET destination = ?, date = ?, price = ?, stock = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
-        if ($stmt->execute([$data->destinantion, $data->date, $data->price, $data->stock, $id])) {
+        if ($stmt->execute([$data->destination, $data->date, $data->price, $data->stock, $id])) {
             response(200, ["message" => "tickets updated"]);
         } else {
             response(500, ["message" => "Failed to update tickets"]);
